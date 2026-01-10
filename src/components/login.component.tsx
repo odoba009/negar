@@ -27,7 +27,7 @@ const BankLogin = ({bank}:BankLoginProps) => {
                 className="w-12 h-12 object-contain"
               />
             </div>
-            <h1 className="text-2xl font-bold text-[#323338] mb-1">Sign in to {bank.name}</h1>
+            <h2 className="text-2xl font-bold text-[#323338] mb-1">Sign in to {bank.name}</h2>
             <p className="text-gray-500 text-[15px] text-center leading-relaxed">
               Connect your bank instantly and securely.
             </p>
