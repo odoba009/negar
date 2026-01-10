@@ -1,18 +1,21 @@
 import { useState } from 'react';
 import { ChevronRight, ArrowLeft } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const BankLogin = ({bank}:BankLoginProps) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  const navigate = useNavigate();
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#F3F5F7] p-4 font-sans">
+    <div className="min-h-screen w-screen flex items-center justify-center md:p-4 font-sans">
       {/* Outer Card */}
-      <div className="w-full max-w-[420px] bg-white rounded-[32px] shadow-[0_20px_60px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col">
+      <div className="w-full max-w-md bg-white overflow-hidden">
         
         {/* Top Navigation */}
         <div className="px-6 pt-6 flex justify-between items-center">
-          <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+          <button onClick={()=>navigate(-1)} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
             <ArrowLeft size={20} className="text-gray-400" />
           </button>
         </div>
@@ -20,11 +23,11 @@ const BankLogin = ({bank}:BankLoginProps) => {
         <div className="px-8 pb-8 pt-2">
           {/* Bank Logo Header */}
           <div className="flex flex-col items-center mb-8">
-            <div className="w-20 h-20 rounded-full bg-gray-50 flex items-center justify-center mb-6 shadow-inner border border-gray-100">
+            <div className="w-50 h-50 flex items-center justify-center mb-6">
               <img 
                 src={bank.logo} 
                 alt={bank.name} 
-                className="w-12 h-12 object-contain"
+                className="w-full h-full object-contain"
               />
             </div>
             <h2 className="text-2xl font-bold text-[#323338] mb-1">Sign in to {bank.name}</h2>

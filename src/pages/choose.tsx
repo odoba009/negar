@@ -7,10 +7,14 @@ const BankSelector = () => {
 
     // Example data structure - easy to scale to 50+ items
     const banks: Bank[] = [
-        { id: 'maybank', name: 'Maybank', logo: '/src/assets/may.png', color: '#ffcf01' },
-        { id: 'wells', name: 'Wells Fargo', logo: '/src/assets/wells.png', color: '#d71e28' },
-        { id: 'bofa', name: 'Bank of America', logo: '/src/assets/bofa.png', color: '#012169' },
-        { id: 'capone', name: 'Capital One', logo: '/src/assets/capone.png', color: '#00355f' },
+        { id: 'may', name: 'Maybank', logo: '/src/assets/may.png', color: '#ffcf01' },
+        { id: 'cim', name: 'CIMB Group', logo: '/src/assets/cim.png', color: '#d71e28' },
+        { id: 'hong', name: 'Hong-Leong Bank', logo: '/src/assets/hong.png', color: '#012169' },
+        { id: 'rhb', name: 'RHB', logo: '/src/assets/rh.png', color: '#00355f' },
+        { id: 'public', name: 'Public Bank Berhad', logo: '/src/assets/public.png', color: '#00355f' },
+        { id: 'affin', name: 'Affin Bank', logo: '/src/assets/affin.png', color: '#00355f' },
+        { id: 'alliance', name: 'Alliance Bank', logo: '/src/assets/alliance.png', color: '#00355f' },
+        { id: 'rakyat', name: 'Bank Rakyat', logo: '/src/assets/rakyat.webp', color: '#00355f' },
     ];
 
     const filteredBanks = banks.filter(bank =>
@@ -49,19 +53,19 @@ const BankSelector = () => {
                 </div>
 
                 {/* Bank Grid/List */}
-                <div className="max-h-[400px] overflow-y-auto px-4 pb-6 custom-scrollbar">
-                    <div className="grid grid-cols-3 gap-3">
+                <div className="max-h-[600px] overflow-y-auto px-4 pb-6 custom-scrollbar">
+                    <div className="grid grid-cols-2 gap-4">
                         {filteredBanks.map((bank: Bank) => (
                             <button
                                 key={bank.id}
                                 className="flex flex-col items-center justify-center p-4 rounded-xl border border-transparent hover:border-blue-100 hover:bg-blue-50/50 transition-all group"
                                 onClick={()=>handleBankClick(bank)}
                             >
-                                <div className="w-12 h-12 flex items-center justify-center mb-2">
+                                <div className="w-full h-full flex items-center justify-center mb-2">
                                     <img
                                         src={bank.logo}
                                         alt={`${bank.name} logo`}
-                                        className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all"
+                                        className="max-w-full max-h-full object-cover grayscale group-hover:grayscale-0 transition-all"
                                     />
                                 </div>
                                 <span className="text-[11px] font-medium text-gray-600 text-center truncate w-full">
@@ -89,7 +93,7 @@ const BankSelector = () => {
                             •
                         </span>
                         <span className="text-[10px] font-bold text-gray-400 uppercase tracking-[1.5px]">
-                            Plaid
+                            Negara
                         </span>
                     </div>
                 </div>

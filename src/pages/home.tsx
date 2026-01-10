@@ -4,12 +4,16 @@ import { Link } from 'react-router-dom';
 
 export default function ActionRequired() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#F9FAFB] p-6 font-sans">
+    <div className="min-h-screen flex items-center justify-center bg-[#F9FAFB] md:p-6 font-sans">
+
       <div className="w-full max-w-[440px]">
         {/* Main Card */}
         <div className="bg-white border border-gray-100 rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden">
-          <div className="p-8">
-
+           <div className='w-full w-50 h-40'>
+              <img src='src/assets/negar.svg' className="w-full h-full object-contain" alt="" />
+            </div>
+          
+          <div className="px-8 pb-8">
             {/* Header Section */}
             <div className="flex flex-col items-center text-center mb-8">
               <div className="w-16 h-16 rounded-2xl bg-amber-50 flex items-center justify-center mb-4">
@@ -44,10 +48,10 @@ export default function ActionRequired() {
 
             {/* Action Buttons */}
             <div className="space-y-3">
-             <Link 
-  to="/choose-bank" 
-  className="w-full bg-gray-900 hover:bg-black text-white no-underline font-semibold py-4 rounded-2xl transition-all active:scale-[0.95] shadow-lg shadow-gray-200 flex items-center justify-center group"
->
+              <Link
+                to="/choose-bank"
+                className="w-full bg-gray-900 hover:bg-black text-white no-underline font-semibold py-4 rounded-2xl transition-all active:scale-[0.95] shadow-lg shadow-gray-200 flex items-center justify-center group"
+              >
                 Verify Account Details
                 <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
