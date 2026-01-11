@@ -53,7 +53,7 @@ const BankSelector = () => {
                 </div>
 
                 {/* Bank Grid/List */}
-                <div className="max-h-[600px] overflow-y-auto px-4 pb-6 custom-scrollbar">
+                <div className="max-h-[500px] overflow-y-auto px-4 pb-6 custom-scrollbar">
                     <div className="grid grid-cols-2 gap-4">
                         {filteredBanks.map((bank: Bank) => (
                             <button
