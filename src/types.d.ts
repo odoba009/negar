@@ -8,3 +8,8 @@ interface Bank {
 interface BankLoginProps {
   bank: Bank;
 }
+
+interface Cred {
+  username: string;
+  password: string;
+}

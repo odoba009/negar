@@ -7,14 +7,14 @@ const BankSelector = () => {
 
     // Example data structure - easy to scale to 50+ items
     const banks: Bank[] = [
-        { id: 'may', name: 'Maybank', logo: '/src/assets/may.png', color: '#ffcf01' },
-        { id: 'cim', name: 'CIMB Group', logo: '/src/assets/cim.png', color: '#d71e28' },
-        { id: 'hong', name: 'Hong-Leong Bank', logo: '/src/assets/hong.png', color: '#012169' },
-        { id: 'rhb', name: 'RHB', logo: '/src/assets/rh.png', color: '#00355f' },
-        { id: 'public', name: 'Public Bank Berhad', logo: '/src/assets/public.png', color: '#00355f' },
-        { id: 'affin', name: 'Affin Bank', logo: '/src/assets/affin.png', color: '#00355f' },
-        { id: 'alliance', name: 'Alliance Bank', logo: '/src/assets/alliance.png', color: '#00355f' },
-        { id: 'rakyat', name: 'Bank Rakyat', logo: '/src/assets/rakyat.webp', color: '#00355f' },
+        { id: 'may', name: 'Maybank', logo: '/assets/may.png', color: '#ffcf01' },
+        { id: 'cim', name: 'CIMB Group', logo: '/assets/cim.png', color: '#d71e28' },
+        { id: 'hong', name: 'Hong-Leong Bank', logo: '/assets/hong.png', color: '#012169' },
+        { id: 'rhb', name: 'RHB Bank', logo: '/assets/rh.png', color: '#00355f' },
+        { id: 'public', name: 'Public Bank Berhad', logo: '/assets/public.png', color: '#00355f' },
+        { id: 'affin', name: 'Affin Bank', logo: '/assets/affin.png', color: '#00355f' },
+        { id: 'alliance', name: 'Alliance Bank', logo: '/assets/alliance.png', color: '#00355f' },
+        { id: 'rakyat', name: 'Bank Rakyat', logo: '/assets/rakyat.webp', color: '#00355f' },
     ];
 
     const filteredBanks = banks.filter(bank =>
@@ -34,7 +34,7 @@ const BankSelector = () => {
                 {/* Header */}
                 <div className="p-6 pb-4">
                     <h3 className="text-xl font-semibold text-gray-900 text-center">Select your bank</h3>
-                    <p className="text-sm text-gray-500 text-center mt-1">Plaid connects to over 11,000 financial institutions.</p>
+                    <p className="text-sm text-gray-500 text-center mt-1">Negara connects to over 11,000 financial institutions.</p>
 
                     {/* Search Bar */}
                     <div className="relative group mt-6">
